@@ -1,0 +1,179 @@
+--------------------------------------------------------------------------------
+Release 14.5 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml ALU.twx ALU.ncd -o ALU.twr ALU.pcf
+
+Design file:              ALU.ncd
+Physical constraint file: ALU.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.08 2013-03-26)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+aluop<0>       |dataout<0>     |    8.973|
+aluop<0>       |dataout<1>     |    8.869|
+aluop<0>       |dataout<2>     |    8.762|
+aluop<0>       |dataout<3>     |    8.728|
+aluop<0>       |dataout<4>     |    8.839|
+aluop<0>       |dataout<5>     |    8.477|
+aluop<0>       |dataout<6>     |    8.358|
+aluop<0>       |dataout<7>     |    8.264|
+aluop<0>       |dataout<8>     |    8.150|
+aluop<0>       |dataout<9>     |    7.611|
+aluop<0>       |dataout<10>    |    8.048|
+aluop<0>       |dataout<11>    |    7.855|
+aluop<0>       |dataout<12>    |    7.944|
+aluop<0>       |dataout<13>    |    8.030|
+aluop<0>       |dataout<14>    |    8.544|
+aluop<0>       |dataout<15>    |    8.254|
+aluop<0>       |dataout<16>    |    9.202|
+aluop<0>       |dataout<17>    |    8.876|
+aluop<0>       |dataout<18>    |    9.301|
+aluop<0>       |dataout<19>    |    8.682|
+aluop<0>       |dataout<20>    |    8.973|
+aluop<0>       |dataout<21>    |    8.640|
+aluop<0>       |dataout<22>    |    8.621|
+aluop<0>       |dataout<23>    |    8.534|
+aluop<0>       |dataout<24>    |    8.487|
+aluop<0>       |dataout<25>    |    8.574|
+aluop<0>       |dataout<26>    |    8.685|
+aluop<0>       |dataout<27>    |    8.776|
+aluop<0>       |dataout<28>    |    8.874|
+aluop<0>       |dataout<29>    |    8.975|
+aluop<0>       |dataout<30>    |    9.078|
+aluop<0>       |dataout<31>    |    9.174|
+aluop<1>       |dataout<0>     |    9.169|
+aluop<1>       |dataout<1>     |    9.065|
+aluop<1>       |dataout<2>     |    8.958|
+aluop<1>       |dataout<3>     |    8.924|
+aluop<1>       |dataout<4>     |    9.035|
+aluop<1>       |dataout<5>     |    8.673|
+aluop<1>       |dataout<6>     |    8.554|
+aluop<1>       |dataout<7>     |    8.460|
+aluop<1>       |dataout<8>     |    8.346|
+aluop<1>       |dataout<9>     |    7.807|
+aluop<1>       |dataout<10>    |    8.244|
+aluop<1>       |dataout<11>    |    8.051|
+aluop<1>       |dataout<12>    |    8.140|
+aluop<1>       |dataout<13>    |    8.226|
+aluop<1>       |dataout<14>    |    8.740|
+aluop<1>       |dataout<15>    |    8.450|
+aluop<1>       |dataout<16>    |    9.398|
+aluop<1>       |dataout<17>    |    8.979|
+aluop<1>       |dataout<18>    |    9.497|
+aluop<1>       |dataout<19>    |    8.657|
+aluop<1>       |dataout<20>    |    9.169|
+aluop<1>       |dataout<21>    |    8.744|
+aluop<1>       |dataout<22>    |    8.817|
+aluop<1>       |dataout<23>    |    8.637|
+aluop<1>       |dataout<24>    |    8.901|
+aluop<1>       |dataout<25>    |    8.770|
+aluop<1>       |dataout<26>    |    8.881|
+aluop<1>       |dataout<27>    |    8.972|
+aluop<1>       |dataout<28>    |    9.070|
+aluop<1>       |dataout<29>    |    9.171|
+aluop<1>       |dataout<30>    |    9.274|
+aluop<1>       |dataout<31>    |    9.370|
+data1<0>       |dataout<0>     |    5.468|
+data1<1>       |dataout<1>     |    5.431|
+data1<2>       |dataout<2>     |    5.699|
+data1<3>       |dataout<3>     |    7.270|
+data1<4>       |dataout<4>     |    7.133|
+data1<5>       |dataout<5>     |    7.147|
+data1<6>       |dataout<6>     |    6.536|
+data1<7>       |dataout<7>     |    7.131|
+data1<8>       |dataout<8>     |    6.762|
+data1<9>       |dataout<9>     |    6.685|
+data1<10>      |dataout<10>    |    6.740|
+data1<11>      |dataout<11>    |    7.031|
+data1<12>      |dataout<12>    |    6.907|
+data1<13>      |dataout<13>    |    6.685|
+data1<14>      |dataout<14>    |    5.390|
+data1<15>      |dataout<15>    |    6.697|
+data1<16>      |dataout<16>    |    6.269|
+data1<17>      |dataout<17>    |    6.651|
+data1<18>      |dataout<18>    |    6.459|
+data1<19>      |dataout<19>    |    6.936|
+data1<20>      |dataout<20>    |    6.643|
+data1<21>      |dataout<21>    |    6.677|
+data1<22>      |dataout<22>    |    6.642|
+data1<23>      |dataout<23>    |    6.608|
+data1<24>      |dataout<24>    |    7.087|
+data1<25>      |dataout<25>    |    6.641|
+data1<26>      |dataout<26>    |    6.950|
+data1<27>      |dataout<27>    |    6.762|
+data1<28>      |dataout<28>    |    6.826|
+data1<29>      |dataout<29>    |    6.781|
+data1<30>      |dataout<30>    |    6.832|
+data1<31>      |dataout<31>    |    6.857|
+data2<0>       |dataout<0>     |    5.947|
+data2<1>       |dataout<1>     |    5.747|
+data2<2>       |dataout<2>     |    5.994|
+data2<3>       |dataout<3>     |    7.198|
+data2<4>       |dataout<4>     |    6.843|
+data2<5>       |dataout<5>     |    7.086|
+data2<6>       |dataout<6>     |    6.856|
+data2<7>       |dataout<7>     |    7.125|
+data2<8>       |dataout<8>     |    7.347|
+data2<9>       |dataout<9>     |    7.246|
+data2<10>      |dataout<10>    |    7.032|
+data2<11>      |dataout<11>    |    7.484|
+data2<12>      |dataout<12>    |    7.274|
+data2<13>      |dataout<13>    |    7.156|
+data2<14>      |dataout<14>    |    5.981|
+data2<15>      |dataout<15>    |    7.304|
+data2<16>      |dataout<16>    |    6.204|
+data2<17>      |dataout<17>    |    6.547|
+data2<18>      |dataout<18>    |    6.178|
+data2<19>      |dataout<19>    |    7.294|
+data2<20>      |dataout<20>    |    6.741|
+data2<21>      |dataout<21>    |    7.411|
+data2<22>      |dataout<22>    |    6.734|
+data2<23>      |dataout<23>    |    7.417|
+data2<24>      |dataout<24>    |    7.234|
+data2<25>      |dataout<25>    |    7.455|
+data2<26>      |dataout<26>    |    7.268|
+data2<27>      |dataout<27>    |    7.474|
+data2<28>      |dataout<28>    |    7.157|
+data2<29>      |dataout<29>    |    7.106|
+data2<30>      |dataout<30>    |    6.627|
+data2<31>      |dataout<31>    |    7.340|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Apr 01 00:55:22 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5004 MB
+
+
+
