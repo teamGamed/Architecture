@@ -3,9 +3,14 @@ ISim P.58f (signature 0x7708f090)
 Number of CPUs detected in this system: 6
 Turning on mult-threading, number of parallel sub-compilation jobs: 12 
 Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/pc/Documents/GitHub/Architecture/fullAdder.vhd" into library work
 Parsing VHDL file "C:/Users/pc/Documents/GitHub/Architecture/OR_gate.vhd" into library work
+Parsing VHDL file "C:/Users/pc/Documents/GitHub/Architecture/not_gate.vhd" into library work
 Parsing VHDL file "C:/Users/pc/Documents/GitHub/Architecture/mux_3to1.vhd" into library work
+Parsing VHDL file "C:/Users/pc/Documents/GitHub/Architecture/mux_2to1.vhd" into library work
+Parsing VHDL file "C:/Users/pc/Documents/GitHub/Architecture/Flags.vhd" into library work
 Parsing VHDL file "C:/Users/pc/Documents/GitHub/Architecture/and_gate.vhd" into library work
+Parsing VHDL file "C:/Users/pc/Documents/GitHub/Architecture/adder.vhd" into library work
 Parsing VHDL file "C:/Users/pc/Documents/GitHub/Architecture/ALU.vhd" into library work
 Parsing VHDL file "C:/Users/pc/Documents/GitHub/Architecture/ALUTest.vhd" into library work
 Starting static elaboration
@@ -13,13 +18,18 @@ Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
 Compiling architecture behavioral of entity mux_3to1 [mux_3to1_default]
+Compiling architecture behavioral of entity fullAdder [fulladder_default]
+Compiling architecture behavioral of entity adder [adder_default]
 Compiling architecture behavioral of entity and_gate [and_gate_default]
 Compiling architecture behavioral of entity OR_gate [or_gate_default]
+Compiling architecture behavioral of entity not_gate [not_gate_default]
+Compiling architecture behavioral of entity mux_2to1 [mux_2to1_default]
+Compiling architecture behavioral of entity Flags [flags_default]
 Compiling architecture behavioral of entity ALU [alu_default]
 Compiling architecture behavior of entity alutest
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 11 VHDL Units
+Compiled 21 VHDL Units
 Built simulation executable C:/Users/pc/Documents/GitHub/Architecture/ALUTest_isim_beh.exe
-Fuse Memory Usage: 29856 KB
-Fuse CPU Usage: 311 ms
+Fuse Memory Usage: 29428 KB
+Fuse CPU Usage: 358 ms

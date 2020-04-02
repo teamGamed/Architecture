@@ -876,7 +876,7 @@ LAB155:    t8 = (t0 + 1832U);
 LAB158:    t8 = (t0 + 2152U);
     t9 = *((char **)t8);
     t16 = *((unsigned char *)t9);
-    t17 = (t16 == (unsigned char)3);
+    t17 = (t16 == (unsigned char)2);
     t13 = t17;
     goto LAB160;
 

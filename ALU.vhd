@@ -53,7 +53,7 @@ architecture Behavioral of ALU is
            b : in  STD_LOGIC_VECTOR(31 downto 0);
            res : out  STD_LOGIC_VECTOR(31 downto 0));
 	end component;
-	-- MUX Comp
+	-- MUX 3 to 1 Comp
 	component mux_3to1 is
     Port ( I0 : in  STD_LOGIC_VECTOR(31 downto 0);
            I1 : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -66,18 +66,66 @@ architecture Behavioral of ALU is
     Port ( x : in  STD_LOGIC_VECTOR(31 downto 0);
            y : out  STD_LOGIC_VECTOR(31 downto 0));
 	end component;
-	
+	-- Full Adder
+	component adder is
+    Port ( a_in : in  STD_LOGIC_VECTOR(31 downto 0);
+           b_in : in  STD_LOGIC_VECTOR(31 downto 0);
+           c_in : in  STD_LOGIC;
+           result : out  STD_LOGIC_VECTOR(31 downto 0);
+           c_out : out  STD_LOGIC;
+			  last_cin : out STD_LOGIC);
+	end component;
+	-- MUX 2 to 1 Comp
+	component mux_2to1 is
+    Port ( I0 : in  STD_LOGIC_VECTOR(31 downto 0);
+           I1 : in  STD_LOGIC_VECTOR(31 downto 0);
+           O : out  STD_LOGIC_VECTOR(31 downto 0);
+           sel : in  STD_LOGIC);
+	end component;
+	component Flags is
+    Port ( r1,r2,r3 : in  STD_LOGIC_VECTOR(31 downto 0);
+			  sel : in STD_LOGIC_VECTOR(1 downto 0);
+			  ca_in : in STD_LOGIC;
+			  ca_out: in STD_LOGIC;
+           z_flag : out  STD_LOGIC;
+			  o_flag : out  STD_LOGIC;
+			  c_flag : out  STD_LOGIC);
+	end component;
 	-- wires
 	signal orRes :std_logic_vector(31 downto 0);
 	signal andRes :std_logic_vector(31 downto 0);
-
+	signal adderRes :std_logic_vector(31 downto 0);
+	signal bNegate :std_logic_vector(31 downto 0);
+	signal bNot :std_logic_vector(31 downto 0);
+	signal ctemp :std_logic;
+	signal lcin :std_logic;
 begin
 	oper_mux: mux_3to1 port map(	I0 => andRes,
 											I1 => orRes,
-											I2 => "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ",
+											I2 => adderRes,
 											S => aluop(1 downto 0),
 											O => dataout);
+	adder1: adder port map(	a_in => data1,
+									b_in => bNegate,
+									c_in => aluop(2),
+									result => adderRes,
+									c_out => ctemp,
+									last_cin => lcin);
 	and1: and_gate port map(data1,data2,andRes);
 	or1: OR_gate port map(data1,data2,orRes);
+	not1: not_gate port map(data2, bNot);
+	mux2: mux_2to1 port map(	I0 => data2,
+										I1 => bNot,
+										O => bNegate,
+										sel => aluop(2));
+	flags1: Flags port map(		r1 => andRes,
+										r2 => orRes,
+										r3 => adderRes,
+										sel => aluop(1 downto 0),
+										ca_in => lcin,
+										ca_out => ctemp,
+										z_flag => zflag,
+										o_flag => oflag,
+										c_flag => cflag);
 end Behavioral;
 
