@@ -41,6 +41,14 @@ entity MUX is
 end MUX;
 
 architecture Behavioral of MUX is
+
+begin
+	process(sel, r1, r2, r3, r4, r5, r6,
+				r7, r8, r9, r10, r11, r12,
+				r13, r14, r15, r16, r17,
+				r18, r19, r20, r21, r22,
+				r23, r24, r25, r26, r27
+				r28, r29, r30, r31, r32) begin
 	case sel is
 		when "00000" => b <= r1;
 		when "00001" => b <= r2;
@@ -73,9 +81,9 @@ architecture Behavioral of MUX is
 		when "11100" => b <= r29;
 		when "11101" => b <= r30;
 		when "11110" => b <= r31;
-		when others  => b <= r32;
+		when "11111"  => b <= r32;
 	  end case;
-begin
+	end process;
 
 end Behavioral;
 
