@@ -1,0 +1,5 @@
+vhdl work "testPack.vhd"
+vhdl work "Register.vhd"
+vhdl work "MUX.vhd"
+vhdl work "DECODER.vhd"
+vhdl work "RegisterFile.vhd"

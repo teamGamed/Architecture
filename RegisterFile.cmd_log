@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/lero1/Documents/arcProjects/architecture/RegisterFile.xst" -ofn "C:/Users/lero1/Documents/arcProjects/architecture/RegisterFile.syr" 

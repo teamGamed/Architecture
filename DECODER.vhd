@@ -11,7 +11,7 @@ end DECODER;
 architecture Behavioral of DECODER is
 
 begin
-    process(b, sel) begin
+    process(sel) begin
         b <= (others => '0');
         case sel is
             when "00000" => b(0) <= '1';
@@ -45,7 +45,7 @@ begin
             when "11100" => b(28) <= '1';
             when "11101" => b(29) <= '1';
             when "11110" => b(30) <= '1';
-            when "11111" => b(31) <= '1';
+            when others => b(31) <= '1';
           end case;
     end process;
 

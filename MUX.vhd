@@ -81,7 +81,7 @@ begin
 		when "11100" => b <= r29;
 		when "11101" => b <= r30;
 		when "11110" => b <= r31;
-		when "11111"  => b <= r32;
+		when others  => b <= r32;
 	  end case;
 	end process;
 
