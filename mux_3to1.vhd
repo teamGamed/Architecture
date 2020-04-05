@@ -30,11 +30,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity mux_3to1 is
-    Port ( I0 : in  STD_LOGIC_VECTOR(31 downto 0);
-           I1 : in  STD_LOGIC_VECTOR(31 downto 0);
-           I2 : in  STD_LOGIC_VECTOR(31 downto 0);
+    Port ( I0 : in  STD_LOGIC;
+           I1 : in  STD_LOGIC;
+           I2 : in  STD_LOGIC;
            S : in  STD_LOGIC_VECTOR(1 downto 0);
-           O : out  STD_LOGIC_VECTOR(31 downto 0));
+           O : out  STD_LOGIC);
 end mux_3to1;
 
 architecture Behavioral of mux_3to1 is
@@ -46,7 +46,7 @@ begin
 			when "00" => O <= I0;	
 			when "01" => O <= I1;
 			when "10" => O <= I2;
-			when others => O <= "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ";
+			when others => O <= 'Z';
 		end case;
 	end process;
 end Behavioral;

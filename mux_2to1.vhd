@@ -30,9 +30,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity mux_2to1 is
-    Port ( I0 : in  STD_LOGIC_VECTOR(31 downto 0);
-           I1 : in  STD_LOGIC_VECTOR(31 downto 0);
-           O : out  STD_LOGIC_VECTOR(31 downto 0);
+    Port ( I0 : in  STD_LOGIC;
+           I1 : in  STD_LOGIC;
+           O : out  STD_LOGIC;
            sel : in  STD_LOGIC);
 end mux_2to1;
 
@@ -43,7 +43,7 @@ begin
 			case sel is 
 				when '0' => O <= I0;
 				when '1' => O <= I1;
-				when others => O <= "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ";
+				when others => O <= 'Z';
 			end case;
 	end process;
 end Behavioral;

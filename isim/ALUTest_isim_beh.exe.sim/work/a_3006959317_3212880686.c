@@ -21,63 +21,48 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/pc/Documents/GitHub/Architecture/and_gate.vhd";
+static const char *ng0 = "M:/ALUver2/and_gate.vhd";
 extern char *IEEE_P_2592010699;
 
-char *ieee_p_2592010699_sub_795620321_503743352(char *, char *, char *, char *, char *, char *);
+unsigned char ieee_p_2592010699_sub_1605435078_503743352(char *, unsigned char , unsigned char );
 
 
 static void work_a_3006959317_3212880686_p_0(char *t0)
 {
-    char t1[16];
+    char *t1;
     char *t2;
-    char *t3;
+    unsigned char t3;
     char *t4;
-    char *t5;
-    char *t6;
+    unsigned char t5;
+    unsigned char t6;
     char *t7;
-    unsigned int t8;
-    unsigned int t9;
-    unsigned char t10;
+    char *t8;
+    char *t9;
+    char *t10;
     char *t11;
-    char *t12;
-    char *t13;
-    char *t14;
-    char *t15;
-    char *t16;
 
 LAB0:    xsi_set_current_line(40, ng0);
 
-LAB3:    t2 = (t0 + 1032U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 4508U);
-    t4 = (t0 + 1192U);
-    t5 = *((char **)t4);
-    t4 = (t0 + 4524U);
-    t6 = ieee_p_2592010699_sub_795620321_503743352(IEEE_P_2592010699, t1, t3, t2, t5, t4);
-    t7 = (t1 + 12U);
-    t8 = *((unsigned int *)t7);
-    t9 = (1U * t8);
-    t10 = (32U != t9);
-    if (t10 == 1)
-        goto LAB5;
+LAB3:    t1 = (t0 + 1032U);
+    t2 = *((char **)t1);
+    t3 = *((unsigned char *)t2);
+    t1 = (t0 + 1192U);
+    t4 = *((char **)t1);
+    t5 = *((unsigned char *)t4);
+    t6 = ieee_p_2592010699_sub_1605435078_503743352(IEEE_P_2592010699, t3, t5);
+    t1 = (t0 + 2912);
+    t7 = (t1 + 56U);
+    t8 = *((char **)t7);
+    t9 = (t8 + 56U);
+    t10 = *((char **)t9);
+    *((unsigned char *)t10) = t6;
+    xsi_driver_first_trans_fast_port(t1);
 
-LAB6:    t11 = (t0 + 2912);
-    t12 = (t11 + 56U);
-    t13 = *((char **)t12);
-    t14 = (t13 + 56U);
-    t15 = *((char **)t14);
-    memcpy(t15, t6, 32U);
-    xsi_driver_first_trans_fast_port(t11);
-
-LAB2:    t16 = (t0 + 2832);
-    *((int *)t16) = 1;
+LAB2:    t11 = (t0 + 2832);
+    *((int *)t11) = 1;
 
 LAB1:    return;
 LAB4:    goto LAB2;
-
-LAB5:    xsi_size_not_matching(32U, t9, 0);
-    goto LAB6;
 
 }
 

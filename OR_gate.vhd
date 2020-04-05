@@ -30,9 +30,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity OR_gate is
-    Port ( a : in  STD_LOGIC_VECTOR(31 downto 0);
-           b : in  STD_LOGIC_VECTOR(31 downto 0);
-           res : out  STD_LOGIC_VECTOR(31 downto 0));
+    Port ( a : in  STD_LOGIC;
+           b : in  STD_LOGIC;
+           res : out  STD_LOGIC);
 end OR_gate;
 
 architecture Behavioral of OR_gate is

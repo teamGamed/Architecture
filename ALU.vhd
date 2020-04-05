@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    21:38:00 03/31/2020 
+-- Create Date:    18:21:30 04/04/2020 
 -- Design Name: 
 -- Module Name:    ALU - Behavioral 
 -- Project Name: 
@@ -41,91 +41,54 @@ entity ALU is
 end ALU;
 
 architecture Behavioral of ALU is
-	-- OR Comp
-	component OR_gate is
-    Port ( a : in  STD_LOGIC_VECTOR(31 downto 0);
-           b : in  STD_LOGIC_VECTOR(31 downto 0);
-           res : out  STD_LOGIC_VECTOR(31 downto 0));
-	end component;
-	-- AND Comp
-	component and_gate is
-    Port ( a : in  STD_LOGIC_VECTOR(31 downto 0);
-           b : in  STD_LOGIC_VECTOR(31 downto 0);
-           res : out  STD_LOGIC_VECTOR(31 downto 0));
-	end component;
-	-- MUX 3 to 1 Comp
-	component mux_3to1 is
-    Port ( I0 : in  STD_LOGIC_VECTOR(31 downto 0);
-           I1 : in  STD_LOGIC_VECTOR(31 downto 0);
-           I2 : in  STD_LOGIC_VECTOR(31 downto 0);
-           S : in  STD_LOGIC_VECTOR(1 downto 0);
-           O : out  STD_LOGIC_VECTOR(31 downto 0));
-	end component;
-	-- NOT Comp
-	component not_gate is
-    Port ( x : in  STD_LOGIC_VECTOR(31 downto 0);
-           y : out  STD_LOGIC_VECTOR(31 downto 0));
-	end component;
-	-- Full Adder
-	component adder is
-    Port ( a_in : in  STD_LOGIC_VECTOR(31 downto 0);
-           b_in : in  STD_LOGIC_VECTOR(31 downto 0);
+component ALU_1bit is
+    Port ( a1 : in  STD_LOGIC;
+           b1 : in  STD_LOGIC;
+           sel1 : in  STD_LOGIC_VECTOR(3 downto 0);
            c_in : in  STD_LOGIC;
-           result : out  STD_LOGIC_VECTOR(31 downto 0);
-           c_out : out  STD_LOGIC;
-			  last_cin : out STD_LOGIC);
-	end component;
-	-- MUX 2 to 1 Comp
-	component mux_2to1 is
-    Port ( I0 : in  STD_LOGIC_VECTOR(31 downto 0);
-           I1 : in  STD_LOGIC_VECTOR(31 downto 0);
-           O : out  STD_LOGIC_VECTOR(31 downto 0);
-           sel : in  STD_LOGIC);
-	end component;
-	component Flags is
-    Port ( r1,r2,r3 : in  STD_LOGIC_VECTOR(31 downto 0);
-			  sel : in STD_LOGIC_VECTOR(1 downto 0);
-			  ca_in : in STD_LOGIC;
-			  ca_out: in STD_LOGIC;
-           z_flag : out  STD_LOGIC;
-			  o_flag : out  STD_LOGIC;
-			  c_flag : out  STD_LOGIC);
-	end component;
-	-- wires
-	signal orRes :std_logic_vector(31 downto 0);
-	signal andRes :std_logic_vector(31 downto 0);
-	signal adderRes :std_logic_vector(31 downto 0);
-	signal bNegate :std_logic_vector(31 downto 0);
-	signal bNot :std_logic_vector(31 downto 0);
-	signal ctemp :std_logic;
-	signal lcin :std_logic;
+           res1 : out  STD_LOGIC;
+           c_out : out  STD_LOGIC);
+end component;
+signal wire: STD_LOGIC_VECTOR(30 downto 0);
+signal temp: STD_LOGIC_VECTOR(31 downto 0);
+signal c_flag: STD_LOGIC;
 begin
-	oper_mux: mux_3to1 port map(	I0 => andRes,
-											I1 => orRes,
-											I2 => adderRes,
-											S => aluop(1 downto 0),
-											O => dataout);
-	adder1: adder port map(	a_in => data1,
-									b_in => bNegate,
-									c_in => aluop(2),
-									result => adderRes,
-									c_out => ctemp,
-									last_cin => lcin);
-	and1: and_gate port map(data1,data2,andRes);
-	or1: OR_gate port map(data1,data2,orRes);
-	not1: not_gate port map(data2, bNot);
-	mux2: mux_2to1 port map(	I0 => data2,
-										I1 => bNot,
-										O => bNegate,
-										sel => aluop(2));
-	flags1: Flags port map(		r1 => andRes,
-										r2 => orRes,
-										r3 => adderRes,
-										sel => aluop(1 downto 0),
-										ca_in => lcin,
-										ca_out => ctemp,
-										z_flag => zflag,
-										o_flag => oflag,
-										c_flag => cflag);
+	bit1: ALU_1bit port map(data1(0),data2(0),aluop,cin,temp(0),wire(0));
+	bit2: ALU_1bit port map(data1(1),data2(1),aluop,wire(0),temp(1),wire(1));
+	bit3: ALU_1bit port map(data1(2),data2(2),aluop,wire(1),temp(2),wire(2));
+	bit4: ALU_1bit port map(data1(3),data2(3),aluop,wire(2),temp(3),wire(3));
+	bit5: ALU_1bit port map(data1(4),data2(4),aluop,wire(3),temp(4),wire(4));
+	bit6: ALU_1bit port map(data1(5),data2(5),aluop,wire(4),temp(5),wire(5));
+	bit7: ALU_1bit port map(data1(6),data2(6),aluop,wire(5),temp(6),wire(6));
+	bit8: ALU_1bit port map(data1(7),data2(7),aluop,wire(6),temp(7),wire(7));
+	bit9: ALU_1bit port map(data1(8),data2(8),aluop,wire(7),temp(8),wire(8));
+	bit10: ALU_1bit port map(data1(9),data2(9),aluop,wire(8),temp(9),wire(9));
+	bit11: ALU_1bit port map(data1(10),data2(10),aluop,wire(9),temp(10),wire(10));
+	bit12: ALU_1bit port map(data1(11),data2(11),aluop,wire(10),temp(11),wire(11));
+	bit13: ALU_1bit port map(data1(12),data2(12),aluop,wire(11),temp(12),wire(12));
+	bit14: ALU_1bit port map(data1(13),data2(13),aluop,wire(12),temp(13),wire(13));
+	bit15: ALU_1bit port map(data1(14),data2(14),aluop,wire(13),temp(14),wire(14));
+	bit16: ALU_1bit port map(data1(15),data2(15),aluop,wire(14),temp(15),wire(15));
+	bit17: ALU_1bit port map(data1(16),data2(16),aluop,wire(15),temp(16),wire(16));
+	bit18: ALU_1bit port map(data1(17),data2(17),aluop,wire(16),temp(17),wire(17));
+	bit19: ALU_1bit port map(data1(18),data2(18),aluop,wire(17),temp(18),wire(18));
+	bit20: ALU_1bit port map(data1(19),data2(19),aluop,wire(18),temp(19),wire(19));
+	bit21: ALU_1bit port map(data1(20),data2(20),aluop,wire(19),temp(20),wire(20));
+	bit22: ALU_1bit port map(data1(21),data2(21),aluop,wire(20),temp(21),wire(21));
+	bit23: ALU_1bit port map(data1(22),data2(22),aluop,wire(21),temp(22),wire(22));
+	bit24: ALU_1bit port map(data1(23),data2(23),aluop,wire(22),temp(23),wire(23));
+	bit25: ALU_1bit port map(data1(24),data2(24),aluop,wire(23),temp(24),wire(24));
+	bit26: ALU_1bit port map(data1(25),data2(25),aluop,wire(24),temp(25),wire(25));
+	bit27: ALU_1bit port map(data1(26),data2(26),aluop,wire(25),temp(26),wire(26));
+	bit28: ALU_1bit port map(data1(27),data2(27),aluop,wire(26),temp(27),wire(27));
+	bit29: ALU_1bit port map(data1(28),data2(28),aluop,wire(27),temp(28),wire(28));
+	bit30: ALU_1bit port map(data1(29),data2(29),aluop,wire(28),temp(29),wire(29));
+	bit31: ALU_1bit port map(data1(30),data2(30),aluop,wire(29),temp(30),wire(30));
+	bit32: ALU_1bit port map(data1(31),data2(31),aluop,wire(30),temp(31),c_flag);
+	zflag <= '1' when temp = "00000000000000000000000000000000" else
+				'0';
+	oflag <= c_flag xor wire(30);
+	dataout <= temp;
+	cflag <= c_flag;
 end Behavioral;
 

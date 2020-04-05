@@ -4,7 +4,7 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Command Line: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 ALU.ngc ALU.ngd
 
-Reading NGO file "C:/Users/pc/Documents/GitHub/Architecture/ALU.ngc" ...
+Reading NGO file "M:/ALUver2/ALU.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -25,10 +25,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 4482484 kilobytes
+Total memory usage is 4482440 kilobytes
 
 Writing NGD file "ALU.ngd" ...
-Total REAL time to NGDBUILD completion:  4 sec
+Total REAL time to NGDBUILD completion:  5 sec
 Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "ALU.bld"...

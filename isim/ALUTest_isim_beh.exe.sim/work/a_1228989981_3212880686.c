@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/pc/Documents/GitHub/Architecture/mux_2to1.vhd";
+static const char *ng0 = "M:/ALUver2/mux_2to1.vhd";
 
 
 
@@ -32,10 +32,11 @@ static void work_a_1228989981_3212880686_p_0(char *t0)
     unsigned char t3;
     char *t4;
     char *t5;
-    char *t6;
+    unsigned char t6;
     char *t7;
     char *t8;
     char *t9;
+    char *t10;
     static char *nl0[] = {&&LAB5, &&LAB5, &&LAB3, &&LAB4, &&LAB5, &&LAB5, &&LAB5, &&LAB5, &&LAB5};
 
 LAB0:    xsi_set_current_line(43, ng0);
@@ -52,36 +53,37 @@ LAB1:    return;
 LAB3:    xsi_set_current_line(44, ng0);
     t4 = (t0 + 1032U);
     t5 = *((char **)t4);
+    t6 = *((unsigned char *)t5);
     t4 = (t0 + 3072);
-    t6 = (t4 + 56U);
-    t7 = *((char **)t6);
-    t8 = (t7 + 56U);
-    t9 = *((char **)t8);
-    memcpy(t9, t5, 32U);
+    t7 = (t4 + 56U);
+    t8 = *((char **)t7);
+    t9 = (t8 + 56U);
+    t10 = *((char **)t9);
+    *((unsigned char *)t10) = t6;
     xsi_driver_first_trans_fast_port(t4);
     goto LAB2;
 
 LAB4:    xsi_set_current_line(45, ng0);
     t1 = (t0 + 1192U);
     t2 = *((char **)t1);
+    t3 = *((unsigned char *)t2);
     t1 = (t0 + 3072);
     t4 = (t1 + 56U);
     t5 = *((char **)t4);
-    t6 = (t5 + 56U);
-    t7 = *((char **)t6);
-    memcpy(t7, t2, 32U);
+    t7 = (t5 + 56U);
+    t8 = *((char **)t7);
+    *((unsigned char *)t8) = t3;
     xsi_driver_first_trans_fast_port(t1);
     goto LAB2;
 
 LAB5:    xsi_set_current_line(46, ng0);
-    t1 = (t0 + 4857);
-    t4 = (t0 + 3072);
+    t1 = (t0 + 3072);
+    t2 = (t1 + 56U);
+    t4 = *((char **)t2);
     t5 = (t4 + 56U);
-    t6 = *((char **)t5);
-    t7 = (t6 + 56U);
-    t8 = *((char **)t7);
-    memcpy(t8, t1, 32U);
-    xsi_driver_first_trans_fast_port(t4);
+    t7 = *((char **)t5);
+    *((unsigned char *)t7) = (unsigned char)4;
+    xsi_driver_first_trans_fast_port(t1);
     goto LAB2;
 
 }

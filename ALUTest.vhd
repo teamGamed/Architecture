@@ -60,7 +60,7 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-			wait for 10ns;
+     		wait for 10ns;
 		--AND testcase
 			data1 <= "11000000000000000000000000000000" ;
 			data2 <= "10100000000000000000000000000000" ;
@@ -135,7 +135,7 @@ BEGIN
 			wait for 1ns;
 			
 		report "Test Complete";
-		wait;
+      wait;
    end process;
 
 END;
