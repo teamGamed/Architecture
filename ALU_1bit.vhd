@@ -85,7 +85,7 @@ begin
 											I2 => adderRes,
 											S => sel1(1 downto 0),
 											O => res1);
-	adder1: fullAdder port map(a1,bNegate,sel1(2),adderRes,c_out);										
+	adder1: fullAdder port map(a1,bNegate,c_in,adderRes,c_out);										
 	and1: and_gate port map(a1,b1,andRes);
 	or1: OR_gate port map(a1,b1,orRes);
 	not1: not_gate port map(b1, bNot);

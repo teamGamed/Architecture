@@ -53,7 +53,7 @@ signal wire: STD_LOGIC_VECTOR(30 downto 0);
 signal temp: STD_LOGIC_VECTOR(31 downto 0);
 signal c_flag: STD_LOGIC;
 begin
-	bit1: ALU_1bit port map(data1(0),data2(0),aluop,cin,temp(0),wire(0));
+	bit1: ALU_1bit port map(data1(0),data2(0),aluop,aluop(2),temp(0),wire(0));
 	bit2: ALU_1bit port map(data1(1),data2(1),aluop,wire(0),temp(1),wire(1));
 	bit3: ALU_1bit port map(data1(2),data2(2),aluop,wire(1),temp(2),wire(2));
 	bit4: ALU_1bit port map(data1(3),data2(3),aluop,wire(2),temp(3),wire(3));
@@ -85,8 +85,8 @@ begin
 	bit30: ALU_1bit port map(data1(29),data2(29),aluop,wire(28),temp(29),wire(29));
 	bit31: ALU_1bit port map(data1(30),data2(30),aluop,wire(29),temp(30),wire(30));
 	bit32: ALU_1bit port map(data1(31),data2(31),aluop,wire(30),temp(31),c_flag);
-	zflag <= '1' when temp = "00000000000000000000000000000000" else
-				'0';
+	zflag <= not(temp(0) or temp(1) or temp(2) or temp(3) or temp(4) or temp(5) or temp(6) or temp(7) or temp(8) or temp(9) or temp(10) or temp(11) or temp(12) or temp(13) or temp(14) or temp(15) or 
+	temp(16) or temp(17) or temp(18) or temp(19) or temp(20) or temp(21) or temp(22) or temp(23) or temp(24) or temp(25) or temp(26) or temp(27) or temp(28) or temp(29) or temp(30) or temp(31));
 	oflag <= c_flag xor wire(30);
 	dataout <= temp;
 	cflag <= c_flag;

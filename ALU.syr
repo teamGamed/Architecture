@@ -4,7 +4,7 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -105,28 +105,28 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "M:\ALUver2\OR_gate.vhd" into library work
+Parsing VHDL file "C:\Users\pc\Documents\GitHub\Architecture\OR_gate.vhd" into library work
 Parsing entity <OR_gate>.
 Parsing architecture <Behavioral> of entity <or_gate>.
-Parsing VHDL file "M:\ALUver2\not_gate.vhd" into library work
+Parsing VHDL file "C:\Users\pc\Documents\GitHub\Architecture\not_gate.vhd" into library work
 Parsing entity <not_gate>.
 Parsing architecture <Behavioral> of entity <not_gate>.
-Parsing VHDL file "M:\ALUver2\mux_3to1.vhd" into library work
+Parsing VHDL file "C:\Users\pc\Documents\GitHub\Architecture\mux_3to1.vhd" into library work
 Parsing entity <mux_3to1>.
 Parsing architecture <Behavioral> of entity <mux_3to1>.
-Parsing VHDL file "M:\ALUver2\mux_2to1.vhd" into library work
+Parsing VHDL file "C:\Users\pc\Documents\GitHub\Architecture\mux_2to1.vhd" into library work
 Parsing entity <mux_2to1>.
 Parsing architecture <Behavioral> of entity <mux_2to1>.
-Parsing VHDL file "M:\ALUver2\fullAdder.vhd" into library work
+Parsing VHDL file "C:\Users\pc\Documents\GitHub\Architecture\fullAdder.vhd" into library work
 Parsing entity <fullAdder>.
 Parsing architecture <Behavioral> of entity <fulladder>.
-Parsing VHDL file "M:\ALUver2\and_gate.vhd" into library work
+Parsing VHDL file "C:\Users\pc\Documents\GitHub\Architecture\and_gate.vhd" into library work
 Parsing entity <and_gate>.
 Parsing architecture <Behavioral> of entity <and_gate>.
-Parsing VHDL file "M:\ALUver2\ALU_1bit.vhd" into library work
+Parsing VHDL file "C:\Users\pc\Documents\GitHub\Architecture\ALU_1bit.vhd" into library work
 Parsing entity <ALU_1bit>.
 Parsing architecture <Behavioral> of entity <alu_1bit>.
-Parsing VHDL file "M:\ALUver2\ALU.vhd" into library work
+Parsing VHDL file "C:\Users\pc\Documents\GitHub\Architecture\ALU.vhd" into library work
 Parsing entity <ALU>.
 Parsing architecture <Behavioral> of entity <alu>.
 
@@ -149,27 +149,27 @@ Elaborating entity <OR_gate> (architecture <Behavioral>) from library <work>.
 Elaborating entity <not_gate> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <mux_2to1> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "M:\ALUver2\mux_2to1.vhd" Line 46. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\pc\Documents\GitHub\Architecture\mux_2to1.vhd" Line 46. Case statement is complete. others clause is never selected
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <ALU>.
-    Related source file is "M:\ALUver2\ALU.vhd".
+    Related source file is "C:\Users\pc\Documents\GitHub\Architecture\ALU.vhd".
+WARNING:Xst:647 - Input <cin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 Unit <ALU> synthesized.
 
 Synthesizing Unit <ALU_1bit>.
-    Related source file is "M:\ALUver2\ALU_1bit.vhd".
+    Related source file is "C:\Users\pc\Documents\GitHub\Architecture\ALU_1bit.vhd".
 WARNING:Xst:647 - Input <sel1<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <c_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
 Unit <ALU_1bit> synthesized.
 
 Synthesizing Unit <mux_3to1>.
-    Related source file is "M:\ALUver2\mux_3to1.vhd".
+    Related source file is "C:\Users\pc\Documents\GitHub\Architecture\mux_3to1.vhd".
     Found 1-bit 3-to-1 multiplexer for signal <S[1]_Z_5_o_Mux_1_o> created at line 45.
     Found 1-bit tristate buffer for signal <O> created at line 43
     Summary:
@@ -178,30 +178,30 @@ Synthesizing Unit <mux_3to1>.
 Unit <mux_3to1> synthesized.
 
 Synthesizing Unit <fullAdder>.
-    Related source file is "M:\ALUver2\fullAdder.vhd".
+    Related source file is "C:\Users\pc\Documents\GitHub\Architecture\fullAdder.vhd".
     Summary:
 Unit <fullAdder> synthesized.
 
 Synthesizing Unit <and_gate>.
-    Related source file is "M:\ALUver2\and_gate.vhd".
+    Related source file is "C:\Users\pc\Documents\GitHub\Architecture\and_gate.vhd".
     Summary:
 	no macro.
 Unit <and_gate> synthesized.
 
 Synthesizing Unit <OR_gate>.
-    Related source file is "M:\ALUver2\OR_gate.vhd".
+    Related source file is "C:\Users\pc\Documents\GitHub\Architecture\OR_gate.vhd".
     Summary:
 	no macro.
 Unit <OR_gate> synthesized.
 
 Synthesizing Unit <not_gate>.
-    Related source file is "M:\ALUver2\not_gate.vhd".
+    Related source file is "C:\Users\pc\Documents\GitHub\Architecture\not_gate.vhd".
     Summary:
 	no macro.
 Unit <not_gate> synthesized.
 
 Synthesizing Unit <mux_2to1>.
-    Related source file is "M:\ALUver2\mux_2to1.vhd".
+    Related source file is "C:\Users\pc\Documents\GitHub\Architecture\mux_2to1.vhd".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <mux_2to1> synthesized.
@@ -239,6 +239,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2042 - Unit ALU: 32 internal tristates are replaced by logic (pull-up yes): N10, N11, N12, N13, N14, N15, N16, N17, N18, N19, N2, N20, N21, N22, N23, N24, N25, N26, N27, N28, N29, N3, N30, N31, N32, N33, N4, N5, N6, N7, N8, N9.
 
 Optimizing unit <ALU> ...
 
@@ -273,14 +274,15 @@ Top Level Output File Name         : ALU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 35
+# BELS                             : 73
 #      LUT2                        : 1
 #      LUT3                        : 1
-#      LUT4                        : 32
-#      LUT5                        : 1
-# IO Buffers                       : 101
+#      LUT4                        : 16
+#      LUT5                        : 2
+#      LUT6                        : 53
+# IO Buffers                       : 102
 #      IBUF                        : 67
-#      OBUF                        : 2
+#      OBUF                        : 3
 #      OBUFT                       : 32
 
 Device utilization summary:
@@ -290,19 +292,19 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   35  out of  63400     0%  
-    Number used as Logic:                35  out of  63400     0%  
+ Number of Slice LUTs:                   73  out of  63400     0%  
+    Number used as Logic:                73  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     35
-   Number with an unused Flip Flop:      35  out of     35   100%  
-   Number with an unused LUT:             0  out of     35     0%  
-   Number of fully used LUT-FF pairs:     0  out of     35     0%  
+ Number of LUT Flip Flop pairs used:     73
+   Number with an unused Flip Flop:      73  out of     73   100%  
+   Number with an unused LUT:             0  out of     73     0%  
+   Number of fully used LUT-FF pairs:     0  out of     73     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                         104
- Number of bonded IOBs:                 101  out of    210    48%  
+ Number of bonded IOBs:                 102  out of    210    48%  
 
 Specific Feature Utilization:
 
@@ -337,7 +339,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 1.065ns
+   Maximum combinational path delay: 11.843ns
 
 Timing Details:
 ---------------
@@ -345,22 +347,39 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 200 / 34
+  Total number of paths / destination ports: 3038 / 35
 -------------------------------------------------------------------------
-Delay:               1.065ns (Levels of Logic = 3)
-  Source:            data2<30> (PAD)
-  Destination:       oflag (PAD)
+Delay:               11.843ns (Levels of Logic = 20)
+  Source:            data1<1> (PAD)
+  Destination:       zflag (PAD)
 
-  Data Path: data2<30> to oflag
+  Data Path: data1<1> to zflag
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.688  data2_30_IBUF (data2_30_IBUF)
-     LUT5:I0->O            1   0.097   0.279  oflag1 (oflag_OBUF)
-     OBUF:I->O                 0.000          oflag_OBUF (oflag)
+     IBUF:I->O             2   0.001   0.688  data1_1_IBUF (data1_1_IBUF)
+     LUT5:I0->O            3   0.097   0.566  bit2/adder1/cout1 (wire<1>)
+     LUT6:I2->O            3   0.097   0.566  bit4/adder1/cout1 (wire<3>)
+     LUT6:I2->O            3   0.097   0.566  bit6/adder1/cout1 (wire<5>)
+     LUT6:I2->O            3   0.097   0.566  bit8/adder1/cout1 (wire<7>)
+     LUT6:I2->O            3   0.097   0.566  bit10/adder1/cout1 (wire<9>)
+     LUT6:I2->O            3   0.097   0.566  bit12/adder1/cout1 (wire<11>)
+     LUT6:I2->O            3   0.097   0.566  bit14/adder1/cout1 (wire<13>)
+     LUT6:I2->O            3   0.097   0.566  bit16/adder1/cout1 (wire<15>)
+     LUT6:I2->O            3   0.097   0.566  bit18/adder1/cout1 (wire<17>)
+     LUT6:I2->O            3   0.097   0.566  bit20/adder1/cout1 (wire<19>)
+     LUT6:I2->O            3   0.097   0.566  bit22/adder1/cout1 (wire<21>)
+     LUT6:I2->O            3   0.097   0.566  bit24/adder1/cout1 (wire<23>)
+     LUT6:I2->O            3   0.097   0.566  bit26/adder1/cout1 (wire<25>)
+     LUT6:I2->O            3   0.097   0.566  bit28/adder1/cout1 (wire<27>)
+     LUT6:I2->O            4   0.097   0.525  bit30/adder1/cout1 (wire<29>)
+     LUT4:I1->O            1   0.097   0.379  bit31/adder1/cout1 (wire<30>)
+     LUT6:I4->O            2   0.097   0.299  bit32/oper_mux/Mmux_S[1]_Z_5_o_Mux_1_o11 (dataout_31_OBUFT)
+     LUT5:I4->O            1   0.097   0.279  zflag7 (zflag_OBUF)
+     OBUF:I->O                 0.000          zflag_OBUF (zflag)
     ----------------------------------------
-    Total                      1.065ns (0.098ns logic, 0.967ns route)
-                                       (9.2% logic, 90.8% route)
+    Total                     11.843ns (1.747ns logic, 10.096ns route)
+                                       (14.8% logic, 85.2% route)
 
 =========================================================================
 
@@ -371,13 +390,13 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.38 secs
+Total CPU time to Xst completion: 7.72 secs
  
 --> 
 
-Total memory usage is 4638492 kilobytes
+Total memory usage is 4638504 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
