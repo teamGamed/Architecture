@@ -108,7 +108,7 @@ begin
 	
     decoderr : DECODER port map(write_sel,write_ena, rd);
     
-    r1  : reg GENERIC map(32) port map(write_data, clk, rd(0) ,'0','0',out1);
+    r1  : reg GENERIC map(32) port map(write_data, clk, rd(0) ,'0','1',out1);
     r2  : reg GENERIC map(32) port map(write_data, clk, rd(1) ,'0','0',out2);
     r3  : reg GENERIC map(32) port map(write_data, clk, rd(2) ,'0','0',out3);
     r4  : reg GENERIC map(32) port map(write_data, clk, rd(3) ,'0','0',out4);
