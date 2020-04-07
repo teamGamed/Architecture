@@ -1,3 +1,4 @@
+vhdl work "RegisterFilePack.vhd"
 vhdl work "Register.vhd"
 vhdl work "MUX.vhd"
 vhdl work "DECODER.vhd"

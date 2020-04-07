@@ -3,6 +3,7 @@ ISim P.58f (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/lero1/Documents/arcProjects/architecture/RegisterFilePack.vhd" into library work
 Parsing VHDL file "C:/Users/lero1/Documents/arcProjects/architecture/Register.vhd" into library work
 Parsing VHDL file "C:/Users/lero1/Documents/arcProjects/architecture/MUX.vhd" into library work
 Parsing VHDL file "C:/Users/lero1/Documents/arcProjects/architecture/DECODER.vhd" into library work
@@ -15,14 +16,15 @@ Compiling package std_logic_1164
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
 Compiling package numeric_std
+Compiling package registerfilepack
 Compiling architecture behavioral of entity DECODER [decoder_default]
 Compiling architecture behavioral of entity Reg [\Reg(32)\]
 Compiling architecture behavioral of entity MUX [mux_default]
 Compiling architecture behavioral of entity RegisterFile [registerfile_default]
 Compiling architecture behavior of entity registerfiletest
 Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
-Compiled 14 VHDL Units
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 15 VHDL Units
 Built simulation executable C:/Users/lero1/Documents/arcProjects/architecture/RegisterFileTest_isim_beh.exe
-Fuse Memory Usage: 37224 KB
-Fuse CPU Usage: 624 ms
+Fuse Memory Usage: 37324 KB
+Fuse CPU Usage: 671 ms
