@@ -4,6 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity DECODER is
     port(
         sel : IN std_logic_vector(4 downto 0);
+        en  : IN std_logic;
         b   : OUT std_logic_vector(31 downto 0)
     );
 end DECODER;
@@ -12,7 +13,8 @@ architecture Behavioral of DECODER is
 
 begin
     process(sel) begin
-        b <= (others => '0');
+        b <= (others => '0'); -- clear the out vector
+		  if en = '1' then
         case sel is
             when "00000" => b(0) <= '1';
             when "00001" => b(1) <= '1';
@@ -47,6 +49,7 @@ begin
             when "11110" => b(30) <= '1';
             when others => b(31) <= '1';
           end case;
+			 end if;
     end process;
 
 end Behavioral;

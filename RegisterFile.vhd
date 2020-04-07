@@ -65,6 +65,7 @@ component Reg is
 	component DECODER is
 		port(
 			sel : IN std_logic_vector(4 downto 0);
+			en  : IN std_logic;
 			b   : OUT std_logic_vector(31 downto 0)
 		);
 	end component;
@@ -105,40 +106,40 @@ component Reg is
 	signal out32 : std_logic_vector(31 downto 0);
 begin	
 	
-    decoderr : DECODER port map(write_sel, rd);
+    decoderr : DECODER port map(write_sel,write_ena, rd);
     
-    r1  : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(0) ,'0','0',out1);
-    r2  : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(1) ,'0','0',out2);
-    r3  : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(2) ,'0','0',out3);
-    r4  : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(3) ,'0','0',out4);
-    r5  : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(4) ,'0','0',out5);
-    r6  : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(5) ,'0','0',out6);
-    r7  : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(6) ,'0','0',out7);
-    r8  : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(7) ,'0','0',out8);
-    r9  : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(8) ,'0','0',out9);
-    r10 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(9) ,'0','0',out10);
-    r11 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(10) ,'0','0',out11);
-    r12 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(11) ,'0','0',out12);
-    r13 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(12) ,'0','0',out13);
-    r14 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(13) ,'0','0',out14);
-    r15 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(14) ,'0','0',out15);
-    r16 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(15) ,'0','0',out16);
-    r17 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(16) ,'0','0',out17);
-    r18 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(17) ,'0','0',out18);
-    r19 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(18) ,'0','0',out19);
-    r20 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(19) ,'0','0',out20);
-    r21 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(20) ,'0','0',out21);
-    r22 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(21) ,'0','0',out22);
-    r23 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(22) ,'0','0',out23);
-    r24 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(23) ,'0','0',out24);
-    r25 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(24) ,'0','0',out25);
-    r26 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(25) ,'0','0',out26);
-    r27 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(26) ,'0','0',out27);
-    r28 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(27) ,'0','0',out28);
-    r29 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(28) ,'0','0',out29);
-    r30 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(29) ,'0','0',out30);
-    r31 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(30) ,'0','0',out31);
-    r32 : reg GENERIC map(32) port map(write_data, clk, write_ena and rd(31) ,'0','0',out32);
+    r1  : reg GENERIC map(32) port map(write_data, clk, rd(0) ,'0','0',out1);
+    r2  : reg GENERIC map(32) port map(write_data, clk, rd(1) ,'0','0',out2);
+    r3  : reg GENERIC map(32) port map(write_data, clk, rd(2) ,'0','0',out3);
+    r4  : reg GENERIC map(32) port map(write_data, clk, rd(3) ,'0','0',out4);
+    r5  : reg GENERIC map(32) port map(write_data, clk, rd(4) ,'0','0',out5);
+    r6  : reg GENERIC map(32) port map(write_data, clk, rd(5) ,'0','0',out6);
+    r7  : reg GENERIC map(32) port map(write_data, clk, rd(6) ,'0','0',out7);
+    r8  : reg GENERIC map(32) port map(write_data, clk, rd(7) ,'0','0',out8);
+    r9  : reg GENERIC map(32) port map(write_data, clk, rd(8) ,'0','0',out9);
+    r10 : reg GENERIC map(32) port map(write_data, clk, rd(9) ,'0','0',out10);
+    r11 : reg GENERIC map(32) port map(write_data, clk, rd(10) ,'0','0',out11);
+    r12 : reg GENERIC map(32) port map(write_data, clk, rd(11) ,'0','0',out12);
+    r13 : reg GENERIC map(32) port map(write_data, clk, rd(12) ,'0','0',out13);
+    r14 : reg GENERIC map(32) port map(write_data, clk, rd(13) ,'0','0',out14);
+    r15 : reg GENERIC map(32) port map(write_data, clk, rd(14) ,'0','0',out15);
+    r16 : reg GENERIC map(32) port map(write_data, clk, rd(15) ,'0','0',out16);
+    r17 : reg GENERIC map(32) port map(write_data, clk, rd(16) ,'0','0',out17);
+    r18 : reg GENERIC map(32) port map(write_data, clk, rd(17) ,'0','0',out18);
+    r19 : reg GENERIC map(32) port map(write_data, clk, rd(18) ,'0','0',out19);
+    r20 : reg GENERIC map(32) port map(write_data, clk, rd(19) ,'0','0',out20);
+    r21 : reg GENERIC map(32) port map(write_data, clk, rd(20) ,'0','0',out21);
+    r22 : reg GENERIC map(32) port map(write_data, clk, rd(21) ,'0','0',out22);
+    r23 : reg GENERIC map(32) port map(write_data, clk, rd(22) ,'0','0',out23);
+    r24 : reg GENERIC map(32) port map(write_data, clk, rd(23) ,'0','0',out24);
+    r25 : reg GENERIC map(32) port map(write_data, clk, rd(24) ,'0','0',out25);
+    r26 : reg GENERIC map(32) port map(write_data, clk, rd(25) ,'0','0',out26);
+    r27 : reg GENERIC map(32) port map(write_data, clk, rd(26) ,'0','0',out27);
+    r28 : reg GENERIC map(32) port map(write_data, clk, rd(27) ,'0','0',out28);
+    r29 : reg GENERIC map(32) port map(write_data, clk, rd(28) ,'0','0',out29);
+    r30 : reg GENERIC map(32) port map(write_data, clk, rd(29) ,'0','0',out30);
+    r31 : reg GENERIC map(32) port map(write_data, clk, rd(30) ,'0','0',out31);
+    r32 : reg GENERIC map(32) port map(write_data, clk, rd(31) ,'0','0',out32);
 		
 	
 	mux1 : MUX port map(read_sel1, data1, out1, out2, out3, out4, out5, out6,
