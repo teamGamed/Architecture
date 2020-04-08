@@ -43,47 +43,37 @@ end MUX;
 architecture Behavioral of MUX is
 
 begin
-	process(sel, r1, r2, r3, r4, r5, r6,
-				r7, r8, r9, r10, r11, r12,
-				r13, r14, r15, r16, r17,
-				r18, r19, r20, r21, r22,
-				r23, r24, r25, r26, r27,
-				r28, r29, r30, r31, r32) begin
-	case sel is
-		when "00000" => b <= r1;
-		when "00001" => b <= r2;
-		when "00010" => b <= r3;
-		when "00011" => b <= r4;
-		when "00100" => b <= r5;
-		when "00101" => b <= r6;
-		when "00110" => b <= r7;
-		when "00111" => b <= r8;
-		when "01000" => b <= r9;
-		when "01001" => b <= r10;
-		when "01010" => b <= r11;
-		when "01011" => b <= r12;
-		when "01100" => b <= r13;
-		when "01101" => b <= r14;
-		when "01110" => b <= r15;
-		when "01111" => b <= r16;
-		when "10000" => b <= r17;
-		when "10001" => b <= r18;
-		when "10010" => b <= r19;
-		when "10011" => b <= r20;
-		when "10100" => b <= r21;
-		when "10101" => b <= r22;
-		when "10110" => b <= r23;
-		when "10111" => b <= r24;
-		when "11000" => b <= r25;
-		when "11001" => b <= r26;
-		when "11010" => b <= r27;
-		when "11011" => b <= r28;
-		when "11100" => b <= r29;
-		when "11101" => b <= r30;
-		when "11110" => b <= r31;
-		when others  => b <= r32;
-	  end case;
-	end process;
-
+	b<= r1  when sel = "00000" else
+		r2  when sel = "00001" else
+		r3  when sel = "00010" else
+		r4  when sel = "00011" else
+		r5  when sel = "00100" else
+		r6  when sel = "00101" else
+		r7  when sel = "00110" else
+		r8  when sel = "00111" else
+		r9  when sel = "01000" else
+		r10 when sel = "01001" else
+		r11 when sel = "01010" else
+		r12 when sel = "01011" else
+		r13 when sel = "01100" else
+		r14 when sel = "01101" else
+		r15 when sel = "01110" else
+		r16 when sel = "01111" else
+		r17 when sel = "10000" else
+		r18 when sel = "10001" else
+		r19 when sel = "10010" else
+		r20 when sel = "10011" else
+		r21 when sel = "10100" else
+		r22 when sel = "10101" else
+		r23 when sel = "10110" else
+		r24 when sel = "10111" else
+		r25 when sel = "11000" else
+		r26 when sel = "11001" else
+		r27 when sel = "11010" else
+		r28 when sel = "11011" else
+		r29 when sel = "11100" else
+		r30 when sel = "11101" else
+		r31 when sel = "11110" else
+		r32;
 end Behavioral;
 
