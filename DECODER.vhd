@@ -12,45 +12,37 @@ end DECODER;
 architecture Behavioral of DECODER is
 
 begin
-    process(sel) begin
-        b <= (others => '0'); -- clear the out vector
-		  if en = '1' then
-        case sel is
-            when "00000" => b(0) <= '1';
-            when "00001" => b(1) <= '1';
-            when "00010" => b(2) <= '1';
-            when "00011" => b(3) <= '1';
-            when "00100" => b(4) <= '1';
-            when "00101" => b(5) <= '1';
-            when "00110" => b(6) <= '1';
-            when "00111" => b(7) <= '1';
-            when "01000" => b(8) <= '1';
-            when "01001" => b(9) <= '1';
-            when "01010" => b(10) <= '1';
-            when "01011" => b(11) <= '1';
-            when "01100" => b(12) <= '1';
-            when "01101" => b(13) <= '1';
-            when "01110" => b(14) <= '1';
-            when "01111" => b(15) <= '1';
-            when "10000" => b(16) <= '1';
-            when "10001" => b(17) <= '1';
-            when "10010" => b(18) <= '1';
-            when "10011" => b(19) <= '1';
-            when "10100" => b(20) <= '1';
-            when "10101" => b(21) <= '1';
-            when "10110" => b(22) <= '1';
-            when "10111" => b(23) <= '1';
-            when "11000" => b(24) <= '1';
-            when "11001" => b(25) <= '1';
-            when "11010" => b(26) <= '1';
-            when "11011" => b(27) <= '1';
-            when "11100" => b(28) <= '1';
-            when "11101" => b(29) <= '1';
-            when "11110" => b(30) <= '1';
-            when others => b(31) <= '1';
-          end case;
-			 end if;
-    end process;
-
+    b(0)  <= '1' when sel = "00000" and en = '1' else '0';
+    b(1)  <= '1' when sel = "00001" and en = '1' else '0';
+    b(2)  <= '1' when sel = "00010" and en = '1' else '0';
+    b(3)  <= '1' when sel = "00011" and en = '1' else '0';
+    b(4)  <= '1' when sel = "00100" and en = '1' else '0';
+    b(5)  <= '1' when sel = "00101" and en = '1' else '0';
+    b(6)  <= '1' when sel = "00110" and en = '1' else '0';
+    b(7)  <= '1' when sel = "00111" and en = '1' else '0';
+    b(8)  <= '1' when sel = "01000" and en = '1' else '0';
+    b(9)  <= '1' when sel = "01001" and en = '1' else '0';
+    b(10) <= '1' when sel = "01010" and en = '1' else '0';
+    b(11) <= '1' when sel = "01011" and en = '1' else '0'; 
+    b(12) <= '1' when sel = "01100" and en = '1' else '0';
+    b(13) <= '1' when sel = "01101" and en = '1' else '0';
+    b(14) <= '1' when sel = "01110" and en = '1' else '0';
+    b(15) <= '1' when sel = "01111" and en = '1' else '0';
+    b(16) <= '1' when sel = "10000" and en = '1' else '0';
+    b(17) <= '1' when sel = "10001" and en = '1' else '0';
+    b(18) <= '1' when sel = "10010" and en = '1' else '0';
+    b(19) <= '1' when sel = "10011" and en = '1' else '0';
+    b(20) <= '1' when sel = "10100" and en = '1' else '0';
+    b(21) <= '1' when sel = "10101" and en = '1' else '0';
+    b(22) <= '1' when sel = "10110" and en = '1' else '0';
+    b(23) <= '1' when sel = "10111" and en = '1' else '0'; 
+    b(24) <= '1' when sel = "11000" and en = '1' else '0';
+    b(25) <= '1' when sel = "11001" and en = '1' else '0';
+    b(26) <= '1' when sel = "11010" and en = '1' else '0';
+    b(27) <= '1' when sel = "11011" and en = '1' else '0';
+    b(28) <= '1' when sel = "11100" and en = '1' else '0';
+    b(29) <= '1' when sel = "11101" and en = '1' else '0';
+    b(30) <= '1' when sel = "11110" and en = '1' else '0';
+    b(31) <= '1' when sel = "11111" and en = '1' else '0';
 end Behavioral;
 
